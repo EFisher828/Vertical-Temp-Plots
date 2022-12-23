@@ -222,7 +222,7 @@ const chartBuilderOnLoad = () => {
 	}
 
 	//let url = `https://api.climate.ncsu.edu/data?loc=MITC,FRYI,JEFF,BEAR,LAUR,UNCA&var=${variable}&start=2020-01-21%2005:00&end=2020-01-21%2005:59&obtype=O&output=json&attr=location,datetime,var,value,value_accum,unit,score,nettype,paramtype,obtype,obnum,obtime&hash=8de315acb7cf795cf0e5a4b9d351caa2efd2a922`
-	let url = `https://api.climate.ncsu.edu/data?loc=MITC,FRYI,JEFF,BEAR,LAUR,UNCA&var=${variable}&start=-60%20minutes&end=now&obtype=O&output=json&attr=location,datetime,var,value,value_accum,unit,score,nettype,paramtype,obtype,obnum,obtime&hash=8de315acb7cf795cf0e5a4b9d351caa2efd2a922`
+	let url = `https://api.climate.ncsu.edu/data?loc=MITC,FRYI,JEFF,BEAR,LAUR,FLET&var=${variable}&start=-60%20minutes&end=now&obtype=O&output=json&attr=location,datetime,var,value,value_accum,unit,score,nettype,paramtype,obtype,obnum,obtime&hash=8de315acb7cf795cf0e5a4b9d351caa2efd2a922`
 	console.log(url)
 
 	const xhr = new XMLHttpRequest();
@@ -233,7 +233,7 @@ const chartBuilderOnLoad = () => {
 		if(xhr.readyState === XMLHttpRequest.DONE){
 			//Station Data Objects
 			console.log(xhr.response.data.MITC)
-			const stationList = ['MITC','FRYI','JEFF','BEAR','LAUR','UNCA']
+			const stationList = ['MITC','FRYI','JEFF','BEAR','LAUR','FLET']
 			let dataList = []
 			let timeList = []
 			let missingStations = []
